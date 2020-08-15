@@ -1,8 +1,9 @@
 <template>
   <div id="app" class="text-center">
-    <h1 class="jumbotron">TODO list</h1>
+    <div class="jumbotron">
+      <img src="./assets/todo.png" alt="todo" id="logo">
+    </div>
     <TodoInput></TodoInput>
-    <hr>
     <TodoItems></TodoItems>
   </div>
 </template>
@@ -21,7 +22,11 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
+#logo {
+  width: 35%;
+}
 
+.jumbotron {
+  background-color: #f5f5f5 !important;
 }
 </style>

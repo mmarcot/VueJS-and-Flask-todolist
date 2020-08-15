@@ -1,6 +1,8 @@
 <template>
     <div>
-        <input type="text" id="todoinput" v-on:keyup.enter="addItem" class="form-control col-sm-6 col-md-5 col-lg-4 col-xl-3 mx-auto">
+        <input type="text" id="todoinput" v-on:keyup.enter="addItem" 
+        class="form-control col-sm-6 col-md-5 col-lg-4 col-xl-3 mx-auto my-5 shadow"
+        placeholder="to do">
     </div>
 </template>
 

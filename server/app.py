@@ -36,7 +36,17 @@ def add_item():
         conn.commit();
         conn.close();
         return jsonify({'status': 'success', 'message': 'item added'})
-
     return jsonify(get_items_dict())
 
+@app.route('/deleteitem', methods=('GET', 'POST'))
+def delete_item():
+    if request.method == 'POST':
+        data = request.get_json()
+        conn = get_db_connection()
+        conn.execute("delete from todoitems where id = ?", (data['id'],));
+        conn.commit();
+        conn.close();
+        return jsonify({'status': 'success', 'message': 'item deleted'})
+    return jsonify({'status': 'failure', 'message': 'Error while trying to delete item'})
+        
 app.run()
