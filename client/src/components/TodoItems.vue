@@ -1,7 +1,7 @@
 <template>
     <div>
         <ul>
-            <li v-for="item in todoitems" v-bind:key="item.id">{{ item.text }}</li>
+            <li v-for="item in todoitems" v-bind:key="item.id">{{ item.content }} <span class="badge badge-warning ml-3">{{ item.vote }}</span></li>
         </ul>
     </div>
 </template>
