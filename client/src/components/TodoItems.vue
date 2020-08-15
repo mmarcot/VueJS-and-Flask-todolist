@@ -30,6 +30,11 @@ export default {
     },
     created() {
         this.getItems();
+    },
+    mounted() {
+        this.$root.$on('refresh', () => {
+            this.getItems();
+        });
     }
 }
 </script>

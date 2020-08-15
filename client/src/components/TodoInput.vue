@@ -16,7 +16,7 @@ export default {
             const path = "http://localhost:5000/additem";
             axios.post(path, {'content': input_value})
                 .then(() => {
-                    // console.log('POST done');
+                    this.$root.$emit('refresh');
                 })
                 .catch((error) => {
                     console.error(error);
