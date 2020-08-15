@@ -5,13 +5,22 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
     name: "TodoInput",
     methods: {
         addItem() {
             let input_value = document.getElementById('todoinput').value;
             document.getElementById('todoinput').value = '';
-            console.log(input_value);
+            const path = "http://localhost:5000/additem";
+            axios.post(path, {'content': input_value})
+                .then(() => {
+                    // console.log('POST done');
+                })
+                .catch((error) => {
+                    console.error(error);
+                })
         }
     }
 }
