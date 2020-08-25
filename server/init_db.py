@@ -9,7 +9,7 @@ cur = connection.cursor()
 
 cur.execute("INSERT INTO todoitems (content) VALUES (?)", ('Content for the first post',))
 cur.execute("INSERT INTO todoitems (content) VALUES (?)", ('Second Post',))
-cur.execute("INSERT INTO todoitems (content) VALUES (?)", ("C'est la zinzinerie",))
+cur.execute("INSERT INTO todoitems (content) VALUES (?)", ("Hello world",))
 
 connection.commit()
 connection.close()
